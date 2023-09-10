@@ -6,7 +6,7 @@ function batch() {
     const default_height = window.prompt("Provide the default height:")
     const preferred_width = window.prompt("Provide the preferred width:")
     const preferred_height = window.prompt("Provide the preferred height:")
-    const base_str = new String("@echo off\necho Setting the resolution to WIDTHxHEIGHT...\ntimeout /t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR SET -w WIDTH -h HEIGHT -noprompt\necho Resolution set to WIDTHxHEIGHT.\ntimeout /t 3 /nobreak >nul 2>&1\necho Starting APP ...\ntimeout a/t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR2\necho APP closed.\ntimeout /t 2 /nobreak >nul 2>&1\necho Setting the resolution back to WIDTH2xHEIGHT2...\ntimeout /t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR SET -w WIDTH2 -h HEIGHT2 -noprompt\necho Resolution set to WIDTH2xHEIGHT2.\npause")
+    const base_str = new String("@echo off\necho Setting the resolution to WIDTHxHEIGHT...\ntimeout /t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR SET -w WIDTH -h HEIGHT -noprompt\necho Resolution set to WIDTHxHEIGHT.\ntimeout /t 3 /nobreak >nul 2>&1\necho Starting APP ...\ntimeout /t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR2\necho APP closed.\ntimeout /t 2 /nobreak >nul 2>&1\necho Setting the resolution back to WIDTH2xHEIGHT2...\ntimeout /t 2 /nobreak >nul 2>&1\nstart \"\" /wait DIR SET -w WIDTH2 -h HEIGHT2 -noprompt\necho Resolution set to WIDTH2xHEIGHT2.\npause")
     const french_name_str = base_str.replace(/APP/g, french_name)
     const french_dir_str = french_name_str.replace("DIR2", french_dir)
     const setres_dir_str = french_dir_str.replace(/DIR/g, setres_dir)
